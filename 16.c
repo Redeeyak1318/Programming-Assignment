@@ -1,0 +1,12 @@
+//W.A.P to reverse count from 10 to 1 using do-while loop.
+
+#include <stdio.h>
+int main()
+{
+    int i = 10;
+    do {
+        printf("%d ", i);
+        i--;
+    } while (i >= 1);
+    return 0;
+}
