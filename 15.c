@@ -10,13 +10,16 @@ int main()
     do {
         if (n > 0) {
             printf("The number is positive.\n");
-        } else if (n < 0) {
-            printf("The number is negative.\n");
-        } else {
-            printf("The number is zero.\n");
+            break;
         }
-        printf("Enter another integer (0 to exit): ");
-        scanf("%d", &n);
+        else if (n < 0) {
+            printf("The number is negative.\n");
+            break;
+        }
+        else {
+            printf("The number is zero.\n");
+            break;
+        }
     } while (n != 0);
 
     return 0;
