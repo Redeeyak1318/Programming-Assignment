@@ -1,25 +1,26 @@
-//W.A.P to print the following pattern:
-//        5
-//      4 5
-//    3 4 5
-//  2 3 4 5
-//1 2 3 4 5
+//W.A.P to find the largest number in an array.
 
 #include <stdio.h>
+
 int main()
 {
-    int i, j, n = 5;
-    for (i = 1; i <= n; i++)
+    int arr[5] = {10, 20, 30, 40, 50};
+    int i, largest = arr[0];
+    printf("The elements of the array are: [ ");
+    for(i=0;i<5;i++)
     {
-        for (j = 1; j <= n - i; j++)
-        {
-            printf("  ");
-        }
-        for (j = n - i + 1; j <= n; j++)
-        {
-            printf("%d ", j);
-        }
-        printf("\n");
+        printf("%d ", arr[i]);
     }
+    printf("]\n");
+
+    for (i = 1; i < 5; i++)
+    {
+        if (arr[i] > largest)
+        {
+            largest = arr[i];
+        }
+    }
+
+    printf("The largest number in the array is: %d", largest);
     return 0;
 }

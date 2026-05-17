@@ -1,37 +1,39 @@
-//W.A.P to find the location of a given number in an array.
+//W.A.P to insert an element in an array at a given position.
 
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i, n, a[100], num, flag=0;
+    int a[100], n, pos, num, i, size;
     printf("Enter the size of the array: ");
     scanf("%d", &n);
+    size=n;
     printf("Enter the elements of the array: ");
-    for(i=0; i<n; i++)
+    for(i=0; i<size; i++)
     {
         scanf("%d", &a[i]);
     }
     printf("The elements of the array are: [ ");
-    for(i=0; i<n; i++)
+    for(i=0; i<size; i++)
     {
         printf("%d ", a[i]);
     }
     printf("]\n");
-
-    printf("Enter the number to find: ");
+    printf("Enter the position to insert the element: ");
+    scanf("%d", &pos);
+    pos--;
+    printf("Enter the number to insert: ");
     scanf("%d", &num);
-    for(i=0; i<n; i++)
+    for(i=size; i>=pos; i--)
     {
-        if(a[i] == num)
-        {
-            flag = 1;
-            printf("Number found at index: %d", i+1);
-            break;
-        }
+        a[i] = a[i-1];
     }
-    if(flag == 0)
+    a[pos] = num;
+    size++;
+    printf("The array after insertion is: [ ");
+    for(i=0; i<size; i++)
     {
-        printf("Number not found in the array.");
+        printf("%d ", a[i]);
     }
+    printf("]\n");
     return 0;
 }

@@ -1,17 +1,18 @@
-//W.A.P to print the multiplication table fro 15 to 20 using do-while loop.
+//W.A.P to fidn the distance between to cartesian points.
 
 #include <stdio.h>
+#include <math.h>
 int main()
 {
-    int i = 15, j;
-    do {
-        j = 1;
-        do {
-            printf("%d * %d = %d\n", i, j, i * j);
-            j++;
-        } while (j <= 10);
-        printf("\n");
-        i++;
-    } while (i <= 20);
+    float x1, y1, x2, y2, dist;
+    printf("Enter the coordinates of the first point (x1 y1): ");
+    scanf("%f %f", &x1, &y1);
+    printf("Enter the coordinates of the second point (x2 y2): ");
+    scanf("%f %f", &x2, &y2);
+    
+    dist = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    
+    printf("The distance between the two points is: %.2f\n", dist);
+    
     return 0;
 }

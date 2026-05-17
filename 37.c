@@ -1,26 +1,37 @@
-//W.A.P to find the largest number in an array.
+//W.A.P to find the location of a given number in an array.
 
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int arr[5] = {10, 20, 30, 40, 50};
-    int i, largest = arr[0];
-    printf("The elements of the array are: [ ");
-    for(i=0;i<5;i++)
+    int i, n, a[100], num, flag=0;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    printf("Enter the elements of the array: ");
+    for(i=0; i<n; i++)
     {
-        printf("%d ", arr[i]);
+        scanf("%d", &a[i]);
+    }
+    printf("The elements of the array are: [ ");
+    for(i=0; i<n; i++)
+    {
+        printf("%d ", a[i]);
     }
     printf("]\n");
 
-    for (i = 1; i < 5; i++)
+    printf("Enter the number to find: ");
+    scanf("%d", &num);
+    for(i=0; i<n; i++)
     {
-        if (arr[i] > largest)
+        if(a[i] == num)
         {
-            largest = arr[i];
+            flag = 1;
+            printf("Number found at index: %d", i+1);
+            break;
         }
     }
-
-    printf("The largest number in the array is: %d", largest);
+    if(flag == 0)
+    {
+        printf("Number not found in the array.");
+    }
     return 0;
 }

@@ -1,26 +1,36 @@
-//W.A.P to enter month number between(1-12) and print number of days in month using if else.
+// W.A.P to input basic salary of an employee and calculate gross salary according to given conditions.
+// Basic Salary <= 10000 : HRA = 20%, DA = 80%
+// Basic Salary is between 10001 to 20000 : HRA = 25%, DA = 90%
+// Basic Salary >= 20001 : HRA = 30%, DA = 95%
 
 #include <stdio.h>
+
 int main()
 {
-    int month;
-    printf("Enter month number (1-12): ");
-    scanf("%d", &month);
-    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+    float basicSalary, hra, da, grossSalary;
+
+    printf("Enter basic salary: ");
+    scanf("%f", &basicSalary);
+
+    if (basicSalary <= 10000)
     {
-        printf("Number of days in month %d is 31.", month);
+        hra = basicSalary * 0.20;
+        da = basicSalary * 0.80;
     }
-    else if (month == 4 || month == 6 || month == 9 || month == 11)
+    else if (basicSalary <= 20000)
     {
-        printf("Number of days in month %d is 30.", month);
-    }
-    else if (month == 2)
-    {
-        printf("Number of days in month %d is 28 or 29.", month);
+        hra = basicSalary * 0.25;
+        da = basicSalary * 0.90;
     }
     else
     {
-        printf("Invalid month number.");
+        hra = basicSalary * 0.30;
+        da = basicSalary * 0.95;
     }
+
+    grossSalary = basicSalary + hra + da;
+
+    printf("Gross salary: %.2f", grossSalary);
+
     return 0;
 }

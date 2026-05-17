@@ -1,19 +1,19 @@
-//W.A.P to find the hypotenuse of a right angle triangle.
+//W.A.P to input any number from user and check whether the given number is positive, negative or zero.
 
 #include <stdio.h>
-#include <math.h>
+int main() {
+    int num;
 
-int main()
-{
-    float a, b, c;
-    printf("Enter the length of the first side: ");
-    scanf("%f", &a);
-    printf("Enter the length of the second side: ");
-    scanf("%f", &b);
-    
-    c = sqrt(a * a + b * b);
-    
-    printf("The hypotenuse of the right angle triangle is: %.2f\n", c);
-    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else if (num < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
     return 0;
 }

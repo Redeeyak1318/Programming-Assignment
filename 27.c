@@ -1,18 +1,19 @@
-//W.A.P to print the following pattern
-//1 2 3
-//4 5 6
-//7 8 9
+//W.A.P to draw the following pattern
+//*
+//* *
+//* * *
+//* * * *
+//* * * * *
 
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int i, j, count = 1;
-    for (i = 1; i <= 3; i++)
+    int i,j;
+    for(i=1;i<=5;i++)
     {
-        for (j = 1; j <= 3; j++)
+        for(j=1;j<=i;j++)
         {
-            printf("%d ", count);
-            count++;
+            printf("* ");
         }
         printf("\n");
     }

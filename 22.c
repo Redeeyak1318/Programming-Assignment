@@ -1,19 +1,18 @@
-//W.A.P to input any number from user and check whether the given number is positive, negative or zero.
+//W.A.P to enter any number and check whether it is divisible by 5 and 11 or not.
 
 #include <stdio.h>
-int main() {
+int main()
+{
     int num;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
-    if (num > 0) {
-        printf("The number is positive.\n");
-    } else if (num < 0) {
-        printf("The number is negative.\n");
-    } else {
-        printf("The number is zero.\n");
+    if (num % 5 == 0 && num % 11 == 0)
+    {
+        printf("%d is divisible by both 5 and 11.", num);
     }
-
+    else
+    {
+        printf("%d is not divisible by both 5 and 11.", num);
+    }
     return 0;
 }

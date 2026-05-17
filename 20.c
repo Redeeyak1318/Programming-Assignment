@@ -1,18 +1,19 @@
-//W.A.P to fidn the distance between to cartesian points.
+//W.A.P to find the hypotenuse of a right angle triangle.
 
 #include <stdio.h>
 #include <math.h>
+
 int main()
 {
-    float x1, y1, x2, y2, dist;
-    printf("Enter the coordinates of the first point (x1 y1): ");
-    scanf("%f %f", &x1, &y1);
-    printf("Enter the coordinates of the second point (x2 y2): ");
-    scanf("%f %f", &x2, &y2);
+    float a, b, c;
+    printf("Enter the length of the first side: ");
+    scanf("%f", &a);
+    printf("Enter the length of the second side: ");
+    scanf("%f", &b);
     
-    dist = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    c = sqrt(a * a + b * b);
     
-    printf("The distance between the two points is: %.2f\n", dist);
+    printf("The hypotenuse of the right angle triangle is: %.2f\n", c);
     
     return 0;
 }
