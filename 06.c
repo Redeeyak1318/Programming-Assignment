@@ -2,23 +2,16 @@
 
 #include <stdio.h>
 int main()
-{
-    int num, binaryNum[32], i = 0;
-
+{   
+    int num, binary = 0, remainder, base = 1;
     printf("Enter a decimal number: ");
     scanf("%d", &num);
-
     while (num > 0) {
-        binaryNum[i] = num % 2;
+        remainder = num % 2;
+        binary = binary + remainder * base;
         num = num / 2;
-        i++;
+        base = base * 10;
     }
-
-    printf("Binary representation: ");
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binaryNum[j]);
-    }
-    printf("\n");
-
+    printf("Binary representation: %d\n", binary);
     return 0;
 }
