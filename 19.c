@@ -1,4 +1,4 @@
-//W.A.P to fidn the distance between to cartesian points.
+//W.A.P to find the distance between two cartesian points.
 
 #include <stdio.h>
 #include <math.h>
