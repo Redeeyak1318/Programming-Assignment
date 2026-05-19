@@ -11,7 +11,7 @@ int main()
     printf("Enter the length of the second side: ");
     scanf("%f", &b);
     
-    c = sqrt(a * a + b * b);
+    c = sqrt(pow(a, 2) + pow(b, 2));
     
     printf("The hypotenuse of the right angle triangle is: %.2f\n", c);
     
